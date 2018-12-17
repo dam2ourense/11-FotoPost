@@ -1,0 +1,7 @@
+{
+  "name": "gag2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

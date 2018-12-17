@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      FotoPost
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="text" *ngFor="let item of posts | async">
+  <!-- <ion-card > -->
+    <!-- <img src="https://galicia.economiadigital.es/uploads/s1/57/48/50/0/praza-do-ferro-ourense_15_970x597.jpeg"> -->
+    <img [src]=item.url>
+    <ion-card-content>
+      <ion-card-title>
+        <!--  Post 1 -->
+          {{item.titulo}} 
+      </ion-card-title>
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button ion-button clear small color="primary" icon-left>
+          <ion-icon name="share-alt"></ion-icon>
+          Compartir
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-card>
+
+
+
+
+
+  <ion-fab bottom right>
+    <button ion-fab color="danger" (click)="mostrar_modal()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
